@@ -5,7 +5,8 @@ Authors@R: person("Mikael Poul", "Johannesson", email = "mikael.johannesson@uib.
 Description: Extract network data from gdf files and imports it into R as an
     igraph graph.
 Depends:
-    R (>= 3.3.1),
+    R (>= 3.3.1)
+Imports:
     data.table,
     igraph,
     bit64
