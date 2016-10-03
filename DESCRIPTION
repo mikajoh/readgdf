@@ -9,8 +9,7 @@ Imports:
     data.table,
     igraph,
     stringr,
-    readr
-Suggests:
+    readr,
     magrittr,
     chron
 License: MIT + file LICENSE
