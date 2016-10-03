@@ -47,7 +47,10 @@ read_gdf <- function(filepath, as_igraph = TRUE, verbose = FALSE) {
                                  integer64 = "double",
                                  verbose = FALSE,
                                  showProgress = verbose)
-  node_data <- node_data[-c(which(duplicated(node_data$name))), ]  # Remove duplicated nodes
+  duplics <- duplicated(node_data$name)
+  if (any(duplics)) {
+    node_data <- node_data[-c(which(duplics)), ]  # Remove duplicated nodes
+  }
   if (as_igraph & has_edge_data) {
     if (verbose) message("4: Converting to igraph")
     out <- igraph::graph_from_data_frame(d = edge_data,
