@@ -6,7 +6,6 @@
 #' @importFrom stringr str_detect
 #' @importFrom readr read_lines
 #' @importFrom data.table fread
-#' @importFrom bit64 integer64
 #'
 #' @param filepath File to import
 #' @param as_igraph Return as igraph graph. If \code{FALSE} it returns a list with the node and edge data, respectively, instead.
