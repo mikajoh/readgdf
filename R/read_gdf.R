@@ -29,7 +29,7 @@ read_gdf <- function(filepath, as_igraph = TRUE, verbose = FALSE) {
                                    header = TRUE,
                                    data.table = FALSE,
                                    integer64 = "double",
-                                   verbose = verbose,
+                                   verbose = FALSE,
                                    showProgress = verbose)
   } else {
     if (verbose) message("(Didn't find edge data)")
@@ -45,7 +45,7 @@ read_gdf <- function(filepath, as_igraph = TRUE, verbose = FALSE) {
                                  header = TRUE,
                                  data.table = FALSE,
                                  integer64 = "double",
-                                 verbose = verbose,
+                                 verbose = FALSE,
                                  showProgress = verbose)
   node_data <- node_data[-c(which(duplicated(node_data$name))), ]  # Remove duplicated nodes
   if (as_igraph & has_edge_data) {
