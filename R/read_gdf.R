@@ -16,10 +16,15 @@ read_gdf <- function(filepath, as_igraph = TRUE, verbose = FALSE) {
   gdf <- readr::read_lines(filepath, progress = verbose)
   if (verbose) message("2: Extracting edge data")
   edge_place_l <- stringr::str_detect(gdf, "edgedef>")
-  has_edge_data <- any(edge_place_l)
-  if (has_edge_data) {
-    edge_place <- which(edge_place_l)
+  edge_place <- which(edge_place_l)
+  if (length(edge_place) > 0) {
+    has_edge_data <- any(edge_place_l) & (length(edge_place:length(gdf)) > 1)
     node_data <- gdf[1:(edge_place - 1)]
+  } else {
+    has_edge_data <- FALSE
+    node_data <- gdf
+  }
+  if (has_edge_data) {
     edge_data <- gdf[edge_place:length(gdf)]
     edge_data[1] <- gsub("edgedef>node", "node", edge_data[1])
     edge_data[1] <- paste0(sapply(strsplit(edge_data[1], ","), function(x) gsub("^(.*) [A-Z]+$", "\\1", x)), collapse = ",")
@@ -33,7 +38,6 @@ read_gdf <- function(filepath, as_igraph = TRUE, verbose = FALSE) {
                                    showProgress = verbose)
   } else {
     if (verbose) message("(Didn't find edge data)")
-    node_data <- gdf
     edge_data <- ""
   }
   if (verbose) message("3: Extracting node data")
@@ -57,7 +61,9 @@ read_gdf <- function(filepath, as_igraph = TRUE, verbose = FALSE) {
                                          directed = TRUE,
                                          vertices = node_data)
   } else {
+    if (as_igraph & !has_edge_data)
+      warning("Not returning and igraph object due to missing edge data")
     out <- list(node_data, edge_data)
-  }
+    }
   return(out)
 }
