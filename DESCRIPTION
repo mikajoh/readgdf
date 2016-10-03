@@ -1,6 +1,6 @@
 Package: readgdf
-Title: Read gdf files
-Version: 0.2
+Title: Read Gdf Files
+Version: 0.1.0
 Authors@R: person("Mikael Poul", "Johannesson", email = "mikael.johannesson@uib.no", role = c("aut", "cre"))
 Description: Read gdf files into R as igraph graphs.
 Depends:
@@ -20,3 +20,5 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 5.0.1
+BugReports: https://github.com/mikaelpoul/readgdf/issues
+URL: https://github.com/mikaelpoul/readgdf
