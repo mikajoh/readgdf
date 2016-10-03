@@ -1,14 +1,16 @@
 Package: readgdf
-Title: Import gdf files as igraph graph
-Version: 0.1
+Title: Read gdf files
+Version: 0.2
 Authors@R: person("Mikael Poul", "Johannesson", email = "mikael.johannesson@uib.no", role = c("aut", "cre"))
-Description: Extract network data from gdf files and imports it into R as an
-    igraph graph.
+Description: Read gdf files into R as igraph graphs.
 Depends:
-    R (>= 3.3.1),
+    R (>= 3.3.1)
+Imports:
     data.table,
     igraph,
-    bit64
+    bit64,
+    stringr,
+    readr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

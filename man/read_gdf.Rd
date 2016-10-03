@@ -2,18 +2,18 @@
 % Please edit documentation in R/read_gdf.R
 \name{read_gdf}
 \alias{read_gdf}
-\title{Read in a gdf file and return an igraph data frame}
+\title{Read in a gdf file}
 \usage{
-read_gdf(filepath, as_igraph = TRUE, verbose = TRUE)
+read_gdf(filepath, as_igraph = TRUE, verbose = FALSE)
 }
 \arguments{
 \item{filepath}{File to import}
 
-\item{as_igraph}{Return as igraph graph. If \code{FALSE}, it returns a list with the node and edge data, respectively.}
+\item{as_igraph}{Return as igraph graph. If \code{FALSE} it returns a list with the node and edge data, respectively, instead.}
 
-\item{verbose}{Whether to print progress in console.}
+\item{verbose}{Whether to print progress in the console.}
 }
 \description{
-Read in a gdf file and return an igraph data frame
+Read in a gdf file and return an igraph graph
 }
 
