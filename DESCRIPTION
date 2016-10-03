@@ -11,7 +11,8 @@ Imports:
     stringr,
     readr,
     magrittr,
-    chron
+    chron,
+    tibble
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
