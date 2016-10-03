@@ -12,7 +12,10 @@ Imports:
     readr,
     magrittr,
     chron,
-    tibble
+    tibble,
+    assertthat,
+    Rcpp,
+    stringi
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
