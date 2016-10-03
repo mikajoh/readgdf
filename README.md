@@ -2,6 +2,7 @@ readgdf: Read gdf files
 ---------------
 
 [![Build Status](https://travis-ci.org/mikaelpoul/readgdf.svg?branch=master)](https://travis-ci.org/mikaelpoul/readgdf)
+[![Build status](https://ci.appveyor.com/api/projects/status/y212iri5joxyln10?svg=true)](https://ci.appveyor.com/project/mikaelpoul/readgdf)
 
 Read gdf files into R as igraph graphs. Work in progress. May or may not work for you. If not, please open an issue or [email me](mailto:mikajoh@gmail.com).
 
