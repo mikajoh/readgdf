@@ -2,12 +2,12 @@ Package: readgdf
 Title: Read Gdf Files
 Version: 0.1.0
 Authors@R: person("Mikael Poul", "Johannesson", email = "mikajoh@gmail.com", role = c("aut", "cre"))
-Description: Import gdf files into R as igraph graphs.
+Description: Import gdf files into R as either igraph graphs or lists with the node and edge data.
 Depends:
     R (>= 3.4)
 Imports:
-    data.table,
     igraph,
+    data.table,
     stringr,
     readr
 License: MIT + file LICENSE
