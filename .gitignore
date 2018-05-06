@@ -6,5 +6,4 @@
 !-Rbuildignore
 *#
 R/data*
-/revdep
 /revdep/.cache.rds
