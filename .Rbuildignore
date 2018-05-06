@@ -10,3 +10,4 @@ R/data.*
 cran-comments.md
 ^revdep$
 ^\.travis\.yml$
+readgdf.Rproj
