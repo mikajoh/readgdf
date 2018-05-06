@@ -16,4 +16,3 @@ read_gdf(filepath, as_igraph = TRUE, verbose = FALSE)
 \description{
 Read in a gdf file and return an igraph graph
 }
-

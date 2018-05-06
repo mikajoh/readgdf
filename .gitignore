@@ -1,11 +1,10 @@
 .Rproj.user
 .Rhistory
 .RData
-.Rproj.user
-.Rhistory
-.RData
 *~
 !.gitignore
 !-Rbuildignore
 *#
 R/data*
+/revdep
+/revdep/.cache.rds

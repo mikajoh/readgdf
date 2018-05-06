@@ -7,3 +7,6 @@ Makefile
 .*\\#$
 R/data.*
 ^appveyor\.yml$
+cran-comments.md
+^revdep$
+^\.travis\.yml$
