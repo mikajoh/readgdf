@@ -6,6 +6,8 @@ readgdf: Read gdf files
 
 Import gdf files into R as igraph graphs.
 
+**This is work in progress**
+
 Install the package using devtools (use `install.packages("devtools")` if you don't have it installed):
 
 ``` R
